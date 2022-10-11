@@ -5,7 +5,7 @@ Id int PRIMARY KEY IDENTITY(1,1),
 Name nvarchar(20) NOT NULL,
 Surname nvarchar(20) NOT NULL,
 Email nvarchar(50) UNIQUE,
-RegistrationDate datetime CHECK(RegistrationDate > 2022-10-11 ) DEFAULT '2022-10-11',
+RegistrationDate datetime CHECK(RegistrationDate > 2022-10-11 ) DEFAULT GETDATE,
 ContactNumber nvarchar(100) DEFAULT '+994000000000',
 Age int CHECK(Age>18),
 Address nvarchar(100)
